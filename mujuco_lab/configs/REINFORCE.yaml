@@ -1,0 +1,16 @@
+env_name: "HalfCheetah-v4"
+model: "REINFORCE"
+method: "default"
+batch: 128
+buffer_size: 1000000
+lr: 0.0003
+gamma: 0.99
+epsilon_init: 1.0          # (연속 액션에서는 Exploration 방식이 다를 수 있으므로, epsilon-greedy가 아닌 다른 탐색 전략을 쓸 수도 있음)
+epsilon_min: 0.05
+epsilon_decay: 0.9999
+n_step: 10000000
+n_train_start: 50000
+target_update_freq: 1000
+test_freq: 5000
+total_episodes: 1000
+
