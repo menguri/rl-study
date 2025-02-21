@@ -13,11 +13,12 @@ import os
 
 # utils 가져오기
 from simulation.sim_utils import render_simulation
-import configs.config_utils import load_config
+from configs.config_utils import load_config
 
 # Model Load
 from nn.A2C import A2C
 from nn.REINFORCE import REINFORCE
+
 
 # 오프스크린 렌더링용 환경 변수 설정
 os.environ["MUJOCO_GL"] = "osmesa"  # 혹은 "egl"
@@ -52,9 +53,9 @@ def main():
 
     # 사전 학습된 정책 네트워크 불러오기
     if config['model'] == 'A2C':
-        agent = A2C(env, test_env, config, DEVICE)
+        agent = A2C(env, config, DEVICE)
     elif config['model'] == 'REINFORCE':
-        agent = REINFORCE(env, test_env, config, DEVICE)
+        agent = REINFORCE(env, config, DEVICE)
     else:
         print(f"There is no model like {config['model']}")
 

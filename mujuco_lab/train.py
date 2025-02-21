@@ -7,12 +7,11 @@ import torch
 import torch.optim as optim
 import numpy as np
 import random
-import configs.config_utils import load_config
+from configs.config_utils import load_config
 
 # Model Load
 from nn.A2C import A2C
 from nn.REINFORCE import REINFORCE
-from nn.policy import ContinuousPolicyNetwork
 
 
 '''
@@ -40,9 +39,9 @@ def main():
     test_env = gym.make(config["env_name"], render_mode="rgb_array")
     
     if config['model'] == 'A2C':
-        agent = A2C(env, test_env, config, DEVICE)
+        agent = A2C(env, config, DEVICE)
     elif config['model'] == 'REINFORCE':
-        agent = REINFORCE(env, test_env, config, DEVICE)
+        agent = REINFORCE(env, config, DEVICE)
     else:
         print(f"There is no model like {config['model']}")
     agent.train()

@@ -1,0 +1,15 @@
+{"time":"2025-02-21T15:07:30.559142579+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250221_150730-gxf0rm2a/logs/debug-core.log"}
+{"time":"2025-02-21T15:07:30.67194294+09:00","level":"INFO","msg":"created new stream","id":"gxf0rm2a"}
+{"time":"2025-02-21T15:07:30.671994976+09:00","level":"INFO","msg":"stream: started","id":"gxf0rm2a"}
+{"time":"2025-02-21T15:07:30.672019883+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"gxf0rm2a"}
+{"time":"2025-02-21T15:07:30.672036518+09:00","level":"INFO","msg":"handler: started","stream_id":"gxf0rm2a"}
+{"time":"2025-02-21T15:07:30.672029396+09:00","level":"INFO","msg":"sender: started","stream_id":"gxf0rm2a"}
+{"time":"2025-02-21T15:07:30.991789559+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T15:07:31.424362426+09:00","level":"INFO","msg":"stream: closing","id":"gxf0rm2a"}
+{"time":"2025-02-21T15:07:31.42441502+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-21T15:07:31.424852738+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-21T15:07:32.479042911+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-21T15:07:32.923763292+09:00","level":"INFO","msg":"handler: closed","stream_id":"gxf0rm2a"}
+{"time":"2025-02-21T15:07:32.923791498+09:00","level":"INFO","msg":"sender: closed","stream_id":"gxf0rm2a"}
+{"time":"2025-02-21T15:07:32.923788872+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"gxf0rm2a"}
+{"time":"2025-02-21T15:07:32.923879427+09:00","level":"INFO","msg":"stream: closed","id":"gxf0rm2a"}

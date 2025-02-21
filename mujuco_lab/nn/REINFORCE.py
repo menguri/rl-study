@@ -3,10 +3,11 @@ import tqdm
 import wandb
 import numpy as np
 import torch
+from collections import deque
 import torch.optim as optim
 import torch.nn as nn
 import torch.nn.functional as F
-from policy import ContinuousPolicyNetwork
+from .policy import ContinuousPolicyNetwork
 
 '''
 REINFORCE.py: 
@@ -16,17 +17,20 @@ REINFORCE.py:
 '''
 
 class REINFORCE:
-    def __init__(self, env, policy, config):
+    def __init__(self, env, config, device):
         self.env = env
-        self.policy = policy
         self.config = config
-        self.device = config['device']
+        self.device = device
         self.method = config['method']
-        self.optimizer = optim.Adam(self.policy.parameters(), lr=config['learning_rate'])
         self.action_dim = env.action_space.shape[0]
+        self.state_dim = env.observation_space.shape[0]
         self.gamma = config['gamma']  # 할인율 (discount factor)
         self.total_episodes = config['total_episodes']
         self.replay_buffer = deque(maxlen=config["buffer_size"])
+
+        # policy
+        self.policy = ContinuousPolicyNetwork(self.state_dim, self.action_dim).to(self.device) 
+        self.optimizer = optim.Adam(self.policy.parameters(), lr=config['lr'])
 
         # best param
         self.best_score = 0.0

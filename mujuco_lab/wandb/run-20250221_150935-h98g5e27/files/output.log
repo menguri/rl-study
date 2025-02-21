@@ -1,0 +1,18 @@
+/home1/alsrn50/miniconda3/lib/python3.10/site-packages/gymnasium/envs/registration.py:517: DeprecationWarning: [33mWARN: The environment HalfCheetah-v4 is out of date. You should consider upgrading to version `v5`.[0m
+  logger.deprecation(
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 44, in main
+    agent = REINFORCE(env, config, DEVICE)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 25, in __init__
+    self.optimizer = optim.Adam(self.policy.parameters(), lr=config['learning_rate'])
+TypeError: Module.parameters() missing 1 required positional argument: 'self'
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 44, in main
+    agent = REINFORCE(env, config, DEVICE)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 25, in __init__
+    self.optimizer = optim.Adam(self.policy.parameters(), lr=config['learning_rate'])
+TypeError: Module.parameters() missing 1 required positional argument: 'self'

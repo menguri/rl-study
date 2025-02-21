@@ -1,0 +1,15 @@
+{"time":"2025-02-21T15:23:18.175597545+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250221_152317-sps26n1v/logs/debug-core.log"}
+{"time":"2025-02-21T15:23:18.285159331+09:00","level":"INFO","msg":"created new stream","id":"sps26n1v"}
+{"time":"2025-02-21T15:23:18.285205761+09:00","level":"INFO","msg":"stream: started","id":"sps26n1v"}
+{"time":"2025-02-21T15:23:18.285224199+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"sps26n1v"}
+{"time":"2025-02-21T15:23:18.285233619+09:00","level":"INFO","msg":"sender: started","stream_id":"sps26n1v"}
+{"time":"2025-02-21T15:23:18.285246126+09:00","level":"INFO","msg":"handler: started","stream_id":"sps26n1v"}
+{"time":"2025-02-21T15:23:18.602674896+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T15:23:18.941370396+09:00","level":"INFO","msg":"stream: closing","id":"sps26n1v"}
+{"time":"2025-02-21T15:23:18.941422334+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-21T15:23:18.941852665+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-21T15:23:19.994452359+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-21T15:23:20.30640041+09:00","level":"INFO","msg":"handler: closed","stream_id":"sps26n1v"}
+{"time":"2025-02-21T15:23:20.306423807+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"sps26n1v"}
+{"time":"2025-02-21T15:23:20.306433102+09:00","level":"INFO","msg":"sender: closed","stream_id":"sps26n1v"}
+{"time":"2025-02-21T15:23:20.306499155+09:00","level":"INFO","msg":"stream: closed","id":"sps26n1v"}

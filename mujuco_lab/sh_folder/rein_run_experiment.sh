@@ -33,7 +33,7 @@ echo "Starting training with config: $CONFIG_PATH"
 python train.py --config $CONFIG_PATH --name $EXP_NAME
 
 
-echo "Training completed. Starting testing..."
-python test.py --config $CONFIG_PATH --name $EXP_NAME
+# echo "Training completed. Starting testing..."
+# python test.py --config $CONFIG_PATH --name $EXP_NAME
 
 echo "Experiment finished."

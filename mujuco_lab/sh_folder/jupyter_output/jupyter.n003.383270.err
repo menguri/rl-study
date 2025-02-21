@@ -117,10 +117,8 @@ Lmod Web Sites
 
 
 Traceback (most recent call last):
-  File "/gpfs/home1/alsrn50/MLIC_LAB/mujuco_lab/train.py", line 4, in <module>
-    import wandb
-ModuleNotFoundError: No module named 'wandb'
-Traceback (most recent call last):
-  File "/gpfs/home1/alsrn50/MLIC_LAB/mujuco_lab/test.py", line 3, in <module>
-    import wandb
-ModuleNotFoundError: No module named 'wandb'
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 13, in <module>
+    from nn.A2C import A2C
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 4, in <module>
+    from policy import ContinuousPolicyNetwork
+ModuleNotFoundError: No module named 'policy'

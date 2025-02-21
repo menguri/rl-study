@@ -1,0 +1,23 @@
+/home1/alsrn50/miniconda3/lib/python3.10/site-packages/gymnasium/envs/registration.py:517: DeprecationWarning: [33mWARN: The environment HalfCheetah-v4 is out of date. You should consider upgrading to version `v5`.[0m
+  logger.deprecation(
+  0%|                                                                         | 0/1000 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 78, in train
+    loss = self.update_policy(log_probs, discounted_rewards)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 109, in update_policy
+    loss = -torch.sum(log_probs * discounted_rewards)
+RuntimeError: The size of tensor a (6) must match the size of tensor b (1000) at non-singleton dimension 1
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 78, in train
+    loss = self.update_policy(log_probs, discounted_rewards)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 109, in update_policy
+    loss = -torch.sum(log_probs * discounted_rewards)
+RuntimeError: The size of tensor a (6) must match the size of tensor b (1000) at non-singleton dimension 1

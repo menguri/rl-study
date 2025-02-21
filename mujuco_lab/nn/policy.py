@@ -3,9 +3,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class ContinuousPolicyNetwork(nn.Module):
-    def __init__(self, state_dim, action_dim, max_action):
+    def __init__(self, state_dim, action_dim):
         super(ContinuousPolicyNetwork, self).__init__()
-        self.max_action = max_action
         
         # 네트워크의 층 정의
         self.fc1 = nn.Linear(state_dim, 256)  # 첫 번째 FC layer
