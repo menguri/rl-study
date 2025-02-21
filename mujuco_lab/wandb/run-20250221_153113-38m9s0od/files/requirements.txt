@@ -23,7 +23,7 @@ executing==2.1.0
 ptyprocess==0.7.0
 zstandard==0.23.0
 webencodings==0.5.1
-cryptography==43.0.3
+cryptography==44.0.1
 conda-package-handling==2.4.0
 nvidia-cusolver-cu11==11.4.1.48
 nvidia-nvtx-cu11==11.8.86
