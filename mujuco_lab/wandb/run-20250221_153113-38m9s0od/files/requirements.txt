@@ -3,7 +3,7 @@ kiwisolver==1.4.7
 kiwisolver==1.4.8
 pydantic_core==2.27.2
 nvidia-cudnn-cu11==9.1.0.70
-Jinja2==3.1.4
+Jinja2==3.1.5
 Jinja2==3.1.5
 rich-click==1.8.5
 h11==0.14.0
