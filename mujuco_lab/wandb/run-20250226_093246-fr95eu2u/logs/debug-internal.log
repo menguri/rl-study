@@ -1,0 +1,19 @@
+{"time":"2025-02-26T09:32:46.980996764+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250226_093246-fr95eu2u/logs/debug-core.log"}
+{"time":"2025-02-26T09:32:47.091834045+09:00","level":"INFO","msg":"created new stream","id":"fr95eu2u"}
+{"time":"2025-02-26T09:32:47.091887292+09:00","level":"INFO","msg":"stream: started","id":"fr95eu2u"}
+{"time":"2025-02-26T09:32:47.09190595+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"fr95eu2u"}
+{"time":"2025-02-26T09:32:47.09192047+09:00","level":"INFO","msg":"sender: started","stream_id":"fr95eu2u"}
+{"time":"2025-02-26T09:32:47.09192073+09:00","level":"INFO","msg":"handler: started","stream_id":"fr95eu2u"}
+{"time":"2025-02-26T09:32:47.405381898+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-26T10:42:45.577064934+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/fr95eu2u/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-02-26T15:28:59.718258244+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/fr95eu2u/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-02-27T08:38:08.938268324+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/fr95eu2u/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-02-27T12:44:44.490118586+09:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-02-27T13:47:08.983848645+09:00","level":"INFO","msg":"stream: closing","id":"fr95eu2u"}
+{"time":"2025-02-27T13:47:08.983916804+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-27T13:47:08.984436681+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-27T13:47:09.829453633+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-27T13:47:10.412804617+09:00","level":"INFO","msg":"handler: closed","stream_id":"fr95eu2u"}
+{"time":"2025-02-27T13:47:10.412832819+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"fr95eu2u"}
+{"time":"2025-02-27T13:47:10.41286267+09:00","level":"INFO","msg":"sender: closed","stream_id":"fr95eu2u"}
+{"time":"2025-02-27T13:47:10.413246064+09:00","level":"INFO","msg":"stream: closed","id":"fr95eu2u"}

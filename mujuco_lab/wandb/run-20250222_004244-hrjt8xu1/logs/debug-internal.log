@@ -1,0 +1,8 @@
+{"time":"2025-02-22T00:42:44.629384532+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250222_004244-hrjt8xu1/logs/debug-core.log"}
+{"time":"2025-02-22T00:42:44.737112533+09:00","level":"INFO","msg":"created new stream","id":"hrjt8xu1"}
+{"time":"2025-02-22T00:42:44.737162923+09:00","level":"INFO","msg":"stream: started","id":"hrjt8xu1"}
+{"time":"2025-02-22T00:42:44.737173927+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"hrjt8xu1"}
+{"time":"2025-02-22T00:42:44.737178382+09:00","level":"INFO","msg":"sender: started","stream_id":"hrjt8xu1"}
+{"time":"2025-02-22T00:42:44.737188311+09:00","level":"INFO","msg":"handler: started","stream_id":"hrjt8xu1"}
+{"time":"2025-02-22T00:42:45.183254659+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-22T03:08:15.66051496+09:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}

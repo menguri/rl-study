@@ -1,0 +1,9 @@
+{"time":"2025-02-26T15:12:39.642301844+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250226_151238-d2898im9/logs/debug-core.log"}
+{"time":"2025-02-26T15:12:39.751751243+09:00","level":"INFO","msg":"created new stream","id":"d2898im9"}
+{"time":"2025-02-26T15:12:39.751785879+09:00","level":"INFO","msg":"stream: started","id":"d2898im9"}
+{"time":"2025-02-26T15:12:39.751800141+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"d2898im9"}
+{"time":"2025-02-26T15:12:39.751806884+09:00","level":"INFO","msg":"sender: started","stream_id":"d2898im9"}
+{"time":"2025-02-26T15:12:39.752495839+09:00","level":"INFO","msg":"handler: started","stream_id":"d2898im9"}
+{"time":"2025-02-26T15:12:40.072635065+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-26T15:28:37.025662094+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/InvertedPendulum-v5_experiment/d2898im9/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-02-26T15:32:04.593572914+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/InvertedPendulum-v5_experiment/d2898im9/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}

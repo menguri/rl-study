@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 42, in main
+    agent = A2C(env, config, DEVICE)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 32, in __init__
+    self.vnet = Critic()
+TypeError: Critic.__init__() missing 2 required positional arguments: 'state_dim' and 'action_dim'
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 42, in main
+    agent = A2C(env, config, DEVICE)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 32, in __init__
+    self.vnet = Critic()
+TypeError: Critic.__init__() missing 2 required positional arguments: 'state_dim' and 'action_dim'

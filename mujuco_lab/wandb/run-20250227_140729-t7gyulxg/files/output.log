@@ -1,0 +1,23 @@
+  2%|█▊                                                                           | 715/30000 [00:07<04:49, 101.04it/s]/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py:244: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:254.)
+  states_t = torch.tensor(states, dtype=torch.float32, device=self.device)
+  2%|█▊                                                                            | 721/30000 [00:07<04:57, 98.40it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 149, in train
+    ls = self.update_policy(batch_log_probs, targets, eligibility_traces, entropies)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 215, in update_policy
+    eligibility_traces = torch.stack(eligibility_traces)
+RuntimeError: stack expects a non-empty TensorList
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 149, in train
+    ls = self.update_policy(batch_log_probs, targets, eligibility_traces, entropies)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 215, in update_policy
+    eligibility_traces = torch.stack(eligibility_traces)
+RuntimeError: stack expects a non-empty TensorList

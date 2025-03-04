@@ -1,0 +1,8 @@
+start at: Wed Feb 26 02:53:57 KST 2025
+node: n018
+jobid: 
+Starting training with config: ./configs/REINFORCE.yaml
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mREINFORCE_default_0.0003_0.99[0m at: [34mhttps://wandb.ai/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/runs/fp0rgh6h[0m
+[1;34mwandb[0m: Find logs at: [1;35m../../../../../gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250226_025402-fp0rgh6h/logs[0m
+Experiment finished.

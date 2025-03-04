@@ -1,0 +1,7 @@
+{"time":"2025-02-26T17:21:06.292764207+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250226_172105-npphtpsa/logs/debug-core.log"}
+{"time":"2025-02-26T17:21:06.400839154+09:00","level":"INFO","msg":"created new stream","id":"npphtpsa"}
+{"time":"2025-02-26T17:21:06.400877516+09:00","level":"INFO","msg":"stream: started","id":"npphtpsa"}
+{"time":"2025-02-26T17:21:06.400890635+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"npphtpsa"}
+{"time":"2025-02-26T17:21:06.400898178+09:00","level":"INFO","msg":"handler: started","stream_id":"npphtpsa"}
+{"time":"2025-02-26T17:21:06.400903048+09:00","level":"INFO","msg":"sender: started","stream_id":"npphtpsa"}
+{"time":"2025-02-26T17:21:06.766202881+09:00","level":"INFO","msg":"Starting system monitor"}

@@ -1,0 +1,8 @@
+start at: Wed Feb 26 09:32:12 KST 2025
+node: n011
+jobid: 
+Starting training with config: ./configs/A2C.yaml
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mA2C_Advantage_0.0001_0.99[0m at: [34mhttps://wandb.ai/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/runs/8zhgi7q9[0m
+[1;34mwandb[0m: Find logs at: [1;35m../../../../../gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250226_093217-8zhgi7q9/logs[0m
+Experiment finished.

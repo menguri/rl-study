@@ -1,0 +1,35 @@
+  0%|                                                              | 0/10000 [00:00<?, ?it/s]/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py:227: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:254.)
+  states_t = torch.tensor(states, dtype=torch.float32, device=self.device)
+ 10%|████▉                                            | 1005/10000 [38:06<5:41:08,  2.28s/it]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 92, in train
+    action, log_prob = self.get_action(state)  # 행동과 로그 확률
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 54, in get_action
+    dist = torch.distributions.Normal(mean, std)
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/distributions/normal.py", line 59, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/distributions/distribution.py", line 71, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (6,)) of distribution Normal(loc: torch.Size([6]), scale: torch.Size([6])) to satisfy the constraint Real(), but found invalid values:
+tensor([nan, nan, nan, nan, nan, nan], device='cuda:0',
+       grad_fn=<ViewBackward0>)
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 92, in train
+    action, log_prob = self.get_action(state)  # 행동과 로그 확률
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 54, in get_action
+    dist = torch.distributions.Normal(mean, std)
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/distributions/normal.py", line 59, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/distributions/distribution.py", line 71, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (6,)) of distribution Normal(loc: torch.Size([6]), scale: torch.Size([6])) to satisfy the constraint Real(), but found invalid values:
+tensor([nan, nan, nan, nan, nan, nan], device='cuda:0',
+       grad_fn=<ViewBackward0>)

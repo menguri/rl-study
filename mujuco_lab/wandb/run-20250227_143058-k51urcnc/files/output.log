@@ -1,0 +1,17 @@
+  0%|                                                                                        | 0/30000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 120, in train
+    total_loss += loss.item()
+UnboundLocalError: local variable 'total_loss' referenced before assignment
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 120, in train
+    total_loss += loss.item()
+UnboundLocalError: local variable 'total_loss' referenced before assignment

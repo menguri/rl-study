@@ -1,0 +1,8 @@
+start at: Thu Feb 27 14:41:05 KST 2025
+node: n039
+jobid: 
+Starting training with config: ./configs/REINFORCE.yaml
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mREINFORCE_default_0.0003_0.99[0m at: [34mhttps://wandb.ai/tatalintelli-university-of-seoul/InvertedPendulum-v5_experiment/runs/lm8tqt0f[0m
+[1;34mwandb[0m: Find logs at: [1;35m../../../../../gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250227_144110-lm8tqt0f/logs[0m
+Experiment finished.

@@ -1,0 +1,23 @@
+  4%|▍         | 1330/30000 [00:16<05:38, 84.70it/s]/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py:245: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:254.)
+  states_t = torch.tensor(states, dtype=torch.float32, device=self.device)
+  4%|▍         | 1330/30000 [00:16<05:54, 80.87it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 149, in train
+    ls = self.update_policy(batch_log_probs, targets, eligibility_traces, entropies)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 215, in update_policy
+    if config['method'] == 'TD_lambda':
+NameError: name 'config' is not defined
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 149, in train
+    ls = self.update_policy(batch_log_probs, targets, eligibility_traces, entropies)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 215, in update_policy
+    if config['method'] == 'TD_lambda':
+NameError: name 'config' is not defined

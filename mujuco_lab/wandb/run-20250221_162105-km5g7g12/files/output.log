@@ -1,0 +1,31 @@
+  0%|                                                                                 | 0/1000 [00:00<?, ?it/s]/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py:140: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  log_prob = torch.tensor(log_prob, dtype=torch.float32).to(self.device)
+  0%|                                                                                 | 0/1000 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 105, in train
+    targets, eligibility_traces, fisher_inv = self.compute_targets(states, actions, rewards, next_states, dones, log_probs)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 150, in compute_targets
+    v_s = self.vnet(state)
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: Critic.forward() missing 1 required positional argument: 'action'
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 105, in train
+    targets, eligibility_traces, fisher_inv = self.compute_targets(states, actions, rewards, next_states, dones, log_probs)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 150, in compute_targets
+    v_s = self.vnet(state)
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: Critic.forward() missing 1 required positional argument: 'action'

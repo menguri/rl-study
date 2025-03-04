@@ -39,7 +39,7 @@ def render_simulation(env,
                 # wandb.Video로 업로드하려면 (T, H, W, C) 형태여야 하므로 리스트에 저장
                 frames.append(np.array(frame, dtype=np.uint8))
 
-            action, log_prob = agent.get_action(state)  # 행동과 로그 확률
+            action, log_prob, entropy = agent.get_action(state)  # 행동과 로그 확률
             next_obs, reward, terminated, truncated, _ = env.step(action)
             state = np.array(next_obs, dtype=np.float32)
             done = terminated or truncated

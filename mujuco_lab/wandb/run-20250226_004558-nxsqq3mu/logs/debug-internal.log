@@ -1,0 +1,16 @@
+{"time":"2025-02-26T00:45:59.07639916+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250226_004558-nxsqq3mu/logs/debug-core.log"}
+{"time":"2025-02-26T00:45:59.188713465+09:00","level":"INFO","msg":"created new stream","id":"nxsqq3mu"}
+{"time":"2025-02-26T00:45:59.188761293+09:00","level":"INFO","msg":"stream: started","id":"nxsqq3mu"}
+{"time":"2025-02-26T00:45:59.188794469+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"nxsqq3mu"}
+{"time":"2025-02-26T00:45:59.188806886+09:00","level":"INFO","msg":"sender: started","stream_id":"nxsqq3mu"}
+{"time":"2025-02-26T00:45:59.189371018+09:00","level":"INFO","msg":"handler: started","stream_id":"nxsqq3mu"}
+{"time":"2025-02-26T00:45:59.633606368+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-27T03:49:57.78407567+09:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/nxsqq3mu/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-02-27T04:48:54.219575705+09:00","level":"INFO","msg":"stream: closing","id":"nxsqq3mu"}
+{"time":"2025-02-27T04:48:54.219661626+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-27T04:48:54.220281886+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-27T04:48:54.94577279+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-27T04:48:55.227828815+09:00","level":"INFO","msg":"handler: closed","stream_id":"nxsqq3mu"}
+{"time":"2025-02-27T04:48:55.227865173+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"nxsqq3mu"}
+{"time":"2025-02-27T04:48:55.227872542+09:00","level":"INFO","msg":"sender: closed","stream_id":"nxsqq3mu"}
+{"time":"2025-02-27T04:48:55.228323817+09:00","level":"INFO","msg":"stream: closed","id":"nxsqq3mu"}

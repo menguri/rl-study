@@ -1,0 +1,7 @@
+{"time":"2025-02-28T13:58:06.512942552+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250228_135806-rfqesi5r/logs/debug-core.log"}
+{"time":"2025-02-28T13:58:06.619654079+09:00","level":"INFO","msg":"created new stream","id":"rfqesi5r"}
+{"time":"2025-02-28T13:58:06.619693547+09:00","level":"INFO","msg":"stream: started","id":"rfqesi5r"}
+{"time":"2025-02-28T13:58:06.619703066+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"rfqesi5r"}
+{"time":"2025-02-28T13:58:06.619708733+09:00","level":"INFO","msg":"handler: started","stream_id":"rfqesi5r"}
+{"time":"2025-02-28T13:58:06.619714641+09:00","level":"INFO","msg":"sender: started","stream_id":"rfqesi5r"}
+{"time":"2025-02-28T13:58:06.971477108+09:00","level":"INFO","msg":"Starting system monitor"}

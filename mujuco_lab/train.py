@@ -33,7 +33,7 @@ def main():
     args = parser.parse_args()
     config = load_config(args.config)
     
-    wandb.init(project="mujuco_experiment", config=config, name=config["env_name"])
+    wandb.init(project=f"{config['env_name']}_experiment", config=config, name=f"{config['model']}_{config['method']}_{config['lr']}_{config['gamma']}")
     
     env = gym.make(config["env_name"], render_mode="rgb_array")
     test_env = gym.make(config["env_name"], render_mode="rgb_array")

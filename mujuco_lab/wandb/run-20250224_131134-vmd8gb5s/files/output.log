@@ -1,0 +1,17 @@
+100%|████████████████████████████████████████████████| 30000/30000 [42:00<00:00, 11.90it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 111, in train
+    self.save_model(self.best_param, self.model_name, f"_episode{best_episode}_best{best_score}.pth")
+NameError: name 'best_score' is not defined
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 111, in train
+    self.save_model(self.best_param, self.model_name, f"_episode{best_episode}_best{best_score}.pth")
+NameError: name 'best_score' is not defined

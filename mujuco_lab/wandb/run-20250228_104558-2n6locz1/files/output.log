@@ -1,0 +1,21 @@
+  0%|                                                                       | 0/30000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 179, in train
+    batch_loss = self.update_policy(batch_log_probs, targets, eligibility_traces, batch_entropies)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 239, in update_policy
+    entropies_t = torch.stack(entropies).to(self.device)
+TypeError: stack(): argument 'tensors' (position 1) must be tuple of Tensors, not Tensor
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 179, in train
+    batch_loss = self.update_policy(batch_log_probs, targets, eligibility_traces, batch_entropies)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 239, in update_policy
+    entropies_t = torch.stack(entropies).to(self.device)
+TypeError: stack(): argument 'tensors' (position 1) must be tuple of Tensors, not Tensor

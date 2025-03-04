@@ -1,0 +1,15 @@
+{"time":"2025-02-24T13:11:34.930309663+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250224_131134-vmd8gb5s/logs/debug-core.log"}
+{"time":"2025-02-24T13:11:35.03676521+09:00","level":"INFO","msg":"created new stream","id":"vmd8gb5s"}
+{"time":"2025-02-24T13:11:35.036799713+09:00","level":"INFO","msg":"stream: started","id":"vmd8gb5s"}
+{"time":"2025-02-24T13:11:35.036808544+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"vmd8gb5s"}
+{"time":"2025-02-24T13:11:35.036815414+09:00","level":"INFO","msg":"sender: started","stream_id":"vmd8gb5s"}
+{"time":"2025-02-24T13:11:35.037196022+09:00","level":"INFO","msg":"handler: started","stream_id":"vmd8gb5s"}
+{"time":"2025-02-24T13:11:35.435158263+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-24T13:53:38.917594034+09:00","level":"INFO","msg":"stream: closing","id":"vmd8gb5s"}
+{"time":"2025-02-24T13:53:38.917646778+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-24T13:53:38.918165301+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-24T13:53:39.660752224+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-24T13:53:39.990568013+09:00","level":"INFO","msg":"handler: closed","stream_id":"vmd8gb5s"}
+{"time":"2025-02-24T13:53:39.990594393+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"vmd8gb5s"}
+{"time":"2025-02-24T13:53:39.990617715+09:00","level":"INFO","msg":"sender: closed","stream_id":"vmd8gb5s"}
+{"time":"2025-02-24T13:53:39.990984463+09:00","level":"INFO","msg":"stream: closed","id":"vmd8gb5s"}

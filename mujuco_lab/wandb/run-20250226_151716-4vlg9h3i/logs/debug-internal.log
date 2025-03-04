@@ -1,0 +1,16 @@
+{"time":"2025-02-26T15:17:17.20892082+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250226_151716-4vlg9h3i/logs/debug-core.log"}
+{"time":"2025-02-26T15:17:17.316343546+09:00","level":"INFO","msg":"created new stream","id":"4vlg9h3i"}
+{"time":"2025-02-26T15:17:17.316380756+09:00","level":"INFO","msg":"stream: started","id":"4vlg9h3i"}
+{"time":"2025-02-26T15:17:17.316393456+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"4vlg9h3i"}
+{"time":"2025-02-26T15:17:17.316410169+09:00","level":"INFO","msg":"sender: started","stream_id":"4vlg9h3i"}
+{"time":"2025-02-26T15:17:17.316401253+09:00","level":"INFO","msg":"handler: started","stream_id":"4vlg9h3i"}
+{"time":"2025-02-26T15:17:17.650413371+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-26T15:27:58.650399827+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/InvertedPendulum-v5_experiment/4vlg9h3i/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-02-26T15:29:44.826323269+09:00","level":"INFO","msg":"stream: closing","id":"4vlg9h3i"}
+{"time":"2025-02-26T15:29:44.826353878+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-26T15:29:44.82690157+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-26T15:29:45.573877365+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-26T15:29:46.094268344+09:00","level":"INFO","msg":"handler: closed","stream_id":"4vlg9h3i"}
+{"time":"2025-02-26T15:29:46.094295682+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"4vlg9h3i"}
+{"time":"2025-02-26T15:29:46.094306838+09:00","level":"INFO","msg":"sender: closed","stream_id":"4vlg9h3i"}
+{"time":"2025-02-26T15:29:46.094909299+09:00","level":"INFO","msg":"stream: closed","id":"4vlg9h3i"}

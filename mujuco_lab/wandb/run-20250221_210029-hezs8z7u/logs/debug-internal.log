@@ -1,0 +1,9 @@
+{"time":"2025-02-21T21:00:29.469455481+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250221_210029-hezs8z7u/logs/debug-core.log"}
+{"time":"2025-02-21T21:00:29.575774124+09:00","level":"INFO","msg":"created new stream","id":"hezs8z7u"}
+{"time":"2025-02-21T21:00:29.575811405+09:00","level":"INFO","msg":"stream: started","id":"hezs8z7u"}
+{"time":"2025-02-21T21:00:29.57582803+09:00","level":"INFO","msg":"handler: started","stream_id":"hezs8z7u"}
+{"time":"2025-02-21T21:00:29.576652723+09:00","level":"INFO","msg":"sender: started","stream_id":"hezs8z7u"}
+{"time":"2025-02-21T21:00:29.577182413+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"hezs8z7u"}
+{"time":"2025-02-21T21:00:29.940325043+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T21:48:00.812430173+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/mujuco_experiment/hezs8z7u/file_stream"}
+{"time":"2025-02-21T21:48:00.812498319+09:00","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/tatalintelli-university-of-seoul/mujuco_experiment/hezs8z7u/file_stream: {\"error\":\"run mujuco_experiment/hezs8z7u not found while streaming file\"}"}

@@ -1,0 +1,9 @@
+{"time":"2025-02-24T13:52:42.182074849+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250224_135241-7j53j48z/logs/debug-core.log"}
+{"time":"2025-02-24T13:52:42.290220373+09:00","level":"INFO","msg":"created new stream","id":"7j53j48z"}
+{"time":"2025-02-24T13:52:42.290258374+09:00","level":"INFO","msg":"stream: started","id":"7j53j48z"}
+{"time":"2025-02-24T13:52:42.290268807+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"7j53j48z"}
+{"time":"2025-02-24T13:52:42.290291055+09:00","level":"INFO","msg":"handler: started","stream_id":"7j53j48z"}
+{"time":"2025-02-24T13:52:42.290277081+09:00","level":"INFO","msg":"sender: started","stream_id":"7j53j48z"}
+{"time":"2025-02-24T13:52:42.610610166+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-24T13:55:13.640177186+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/Hopper-v5_experiment/7j53j48z/file_stream"}
+{"time":"2025-02-24T13:55:13.640235091+09:00","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/tatalintelli-university-of-seoul/Hopper-v5_experiment/7j53j48z/file_stream: {\"error\":\"run Hopper-v5_experiment/7j53j48z not found while streaming file\"}"}

@@ -1,0 +1,23 @@
+  0%|                                                                                | 0/1000 [00:00<?, ?it/s]
+tensor([-1.3767, -1.9471, -1.0943, -0.9164, -0.9320, -5.9587], device='cuda:0',
+       grad_fn=<SubBackward0>)
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 80, in train
+    loss = self.update_policy(log_probs, discounted_rewards)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 111, in update_policy
+    loss = -torch.sum(log_probs * discounted_rewards)
+RuntimeError: The size of tensor a (6) must match the size of tensor b (0) at non-singleton dimension 1
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 80, in train
+    loss = self.update_policy(log_probs, discounted_rewards)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 111, in update_policy
+    loss = -torch.sum(log_probs * discounted_rewards)
+RuntimeError: The size of tensor a (6) must match the size of tensor b (0) at non-singleton dimension 1

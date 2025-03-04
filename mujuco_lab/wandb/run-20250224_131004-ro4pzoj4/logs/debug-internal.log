@@ -1,0 +1,9 @@
+{"time":"2025-02-24T13:10:04.354334219+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250224_131004-ro4pzoj4/logs/debug-core.log"}
+{"time":"2025-02-24T13:10:04.466368024+09:00","level":"INFO","msg":"created new stream","id":"ro4pzoj4"}
+{"time":"2025-02-24T13:10:04.466413143+09:00","level":"INFO","msg":"stream: started","id":"ro4pzoj4"}
+{"time":"2025-02-24T13:10:04.466425175+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"ro4pzoj4"}
+{"time":"2025-02-24T13:10:04.466452292+09:00","level":"INFO","msg":"handler: started","stream_id":"ro4pzoj4"}
+{"time":"2025-02-24T13:10:04.466443898+09:00","level":"INFO","msg":"sender: started","stream_id":"ro4pzoj4"}
+{"time":"2025-02-24T13:10:04.791058173+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-24T13:12:05.755658945+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/ro4pzoj4/file_stream"}
+{"time":"2025-02-24T13:12:05.755712119+09:00","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/ro4pzoj4/file_stream: {\"error\":\"project tatalintelli-university-of-seoul/HalfCheetah-v5_experiment not found while streaming file\"}"}

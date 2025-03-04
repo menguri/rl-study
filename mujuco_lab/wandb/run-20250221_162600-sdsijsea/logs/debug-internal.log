@@ -1,0 +1,15 @@
+{"time":"2025-02-21T16:26:00.980862537+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250221_162600-sdsijsea/logs/debug-core.log"}
+{"time":"2025-02-21T16:26:01.087625859+09:00","level":"INFO","msg":"created new stream","id":"sdsijsea"}
+{"time":"2025-02-21T16:26:01.087659618+09:00","level":"INFO","msg":"stream: started","id":"sdsijsea"}
+{"time":"2025-02-21T16:26:01.087670938+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"sdsijsea"}
+{"time":"2025-02-21T16:26:01.088058052+09:00","level":"INFO","msg":"handler: started","stream_id":"sdsijsea"}
+{"time":"2025-02-21T16:26:01.087677324+09:00","level":"INFO","msg":"sender: started","stream_id":"sdsijsea"}
+{"time":"2025-02-21T16:26:01.476223585+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T16:26:05.68787494+09:00","level":"INFO","msg":"stream: closing","id":"sdsijsea"}
+{"time":"2025-02-21T16:26:05.687911855+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-21T16:26:05.688311387+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-21T16:26:06.530304009+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-21T16:26:06.823013858+09:00","level":"INFO","msg":"handler: closed","stream_id":"sdsijsea"}
+{"time":"2025-02-21T16:26:06.823032278+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"sdsijsea"}
+{"time":"2025-02-21T16:26:06.823059843+09:00","level":"INFO","msg":"sender: closed","stream_id":"sdsijsea"}
+{"time":"2025-02-21T16:26:06.823128864+09:00","level":"INFO","msg":"stream: closed","id":"sdsijsea"}

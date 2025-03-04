@@ -1,0 +1,9 @@
+{"time":"2025-02-21T17:02:16.017387448+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250221_170215-3pupwpnz/logs/debug-core.log"}
+{"time":"2025-02-21T17:02:16.124418435+09:00","level":"INFO","msg":"created new stream","id":"3pupwpnz"}
+{"time":"2025-02-21T17:02:16.124459933+09:00","level":"INFO","msg":"stream: started","id":"3pupwpnz"}
+{"time":"2025-02-21T17:02:16.124470229+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"3pupwpnz"}
+{"time":"2025-02-21T17:02:16.124476398+09:00","level":"INFO","msg":"sender: started","stream_id":"3pupwpnz"}
+{"time":"2025-02-21T17:02:16.124482204+09:00","level":"INFO","msg":"handler: started","stream_id":"3pupwpnz"}
+{"time":"2025-02-21T17:02:17.792070094+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T17:03:48.632541266+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/mujuco_experiment/3pupwpnz/file_stream"}
+{"time":"2025-02-21T17:03:48.632613113+09:00","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/tatalintelli-university-of-seoul/mujuco_experiment/3pupwpnz/file_stream: {\"error\":\"run mujuco_experiment/3pupwpnz not found while streaming file\"}"}

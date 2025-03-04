@@ -1,0 +1,149 @@
+
+Modules based on Lua: Version 8.7.37   2024-04-09 08:31 +00:00
+    by Robert McLay mclay@tacc.utexas.edu
+
+module [options] sub-command [args ...]
+
+Help sub-commands:
+------------------
+  help                              prints this message
+  help                module [...]  print help message from module(s)
+
+Loading/Unloading sub-commands:
+-------------------------------
+  load | add          module [...]  load module(s)
+  try-load | try-add  module [...]  Add module(s), do not complain if not
+                                    found
+  del | unload        module [...]  Remove module(s), do not complain if not
+                                    found
+  swap | sw | switch  m1 m2         unload m1 and load m2
+  purge                             unload all modules
+  refresh                           reload aliases from current list of
+                                    modules.
+  update                            reload all currently loaded modules.
+
+Listing / Searching sub-commands:
+---------------------------------
+  list                              List loaded modules
+  list                s1 s2 ...     List loaded modules that match the
+                                    pattern
+  avail | av                        List available modules
+  avail | av          string        List available modules that contain
+                                    "string".
+  category | cat                    List all categories
+  category | cat      s1 s2 ...     List all categories that match the
+                                    pattern and display their modules
+  overview | ov                     List all available modules by short
+                                    names with number of versions
+  overview | ov       string        List available modules by short names
+                                    with number of versions that contain
+                                    "string"
+  spider                            List all possible modules
+  spider              module        List all possible version of that module
+                                    file
+  spider              string        List all module that contain the
+                                    "string".
+  spider              name/version  Detailed information about that version
+                                    of the module.
+  whatis              module        Print whatis information about module
+  keyword | key       string        Search all name and whatis that contain
+                                    "string".
+
+Searching with Lmod:
+--------------------
+  All searching (spider, list, avail, keyword) support regular expressions:
+  
+
+  -r spider           '^p'          Finds all the modules that start with
+                                    `p' or `P'
+  -r spider           mpi           Finds all modules that have "mpi" in
+                                    their name.
+  -r spider           'mpi$         Finds all modules that end with "mpi" in
+                                    their name.
+
+Handling a collection of modules:
+--------------------------------
+  save | s                          Save the current list of modules to a
+                                    user defined "default" collection.
+  save | s            name          Save the current list of modules to
+                                    "name" collection.
+  reset                             The same as "restore system"
+  restore | r                       Restore modules from the user's
+                                    "default" or system default.
+  restore | r         name          Restore modules from "name" collection.
+  restore             system        Restore module state to system defaults.
+  savelist                          List of saved collections.
+  describe | mcc      name          Describe the contents of a module
+                                    collection.
+  disable             name          Disable (i.e. remove) a collection.
+
+Deprecated commands:
+--------------------
+  getdefault          [name]        load name collection of modules or
+                                    user's "default" if no name given.
+                                    ===> Use "restore" instead <====
+  setdefault          [name]        Save current list of modules to name if
+                                    given, otherwise save as the default
+                                    list for you the user.
+                                    ===> Use "save" instead. <====
+
+Miscellaneous sub-commands:
+---------------------------
+  is-loaded           modulefile    return a true status if module is loaded
+  is-avail            modulefile    return a true status if module can be
+                                    loaded
+  show                modulefile    show the commands in the module file.
+  use [-a]            path          Prepend or Append path to MODULEPATH.
+  unuse               path          remove path from MODULEPATH.
+  tablelist                         output list of active modules as a lua
+                                    table.
+
+Important Environment Variables:
+--------------------------------
+  LMOD_COLORIZE                     If defined to be "YES" then Lmod prints
+                                    properties and warning in color.
+
+    --------------------------------------------------------------------------
+
+Lmod Web Sites
+
+  Documentation:    https://lmod.readthedocs.org
+  GitHub:           https://github.com/TACC/Lmod
+  SourceForge:      https://lmod.sf.net
+  TACC Homepage:    https://www.tacc.utexas.edu/research-development/tacc-projects/lmod
+
+  To report a bug please read https://lmod.readthedocs.io/en/latest/075_bug_reporting.html
+    --------------------------------------------------------------------------
+
+
+wandb: Currently logged in as: tatalintelli (tatalintelli-university-of-seoul) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Tracking run with wandb version 0.19.6
+wandb: Run data is saved locally in /gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250227_141342-ybage600
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run A2C_Advantage_0.0001_0.99
+wandb: ⭐️ View project at https://wandb.ai/tatalintelli-university-of-seoul/InvertedPendulum-v5_experiment
+wandb: 🚀 View run at https://wandb.ai/tatalintelli-university-of-seoul/InvertedPendulum-v5_experiment/runs/ybage600
+  0%|          | 0/30000 [00:00<?, ?it/s]  0%|          | 1/30000 [00:00<2:05:52,  3.97it/s]  0%|          | 11/30000 [00:00<12:55, 38.65it/s]   0%|          | 22/30000 [00:00<08:01, 62.28it/s]  0%|          | 31/30000 [00:00<08:24, 59.37it/s]  0%|          | 43/30000 [00:00<07:09, 69.67it/s]  0%|          | 54/30000 [00:00<06:23, 78.14it/s]  0%|          | 64/30000 [00:00<05:58, 83.39it/s]  0%|          | 74/30000 [00:01<05:44, 86.98it/s]  0%|          | 84/30000 [00:01<06:15, 79.73it/s]  0%|          | 93/30000 [00:01<06:25, 77.64it/s]  0%|          | 102/30000 [00:01<06:27, 77.14it/s]  0%|          | 110/30000 [00:01<07:26, 67.02it/s]  0%|          | 119/30000 [00:01<06:51, 72.58it/s]  0%|          | 132/30000 [00:01<05:49, 85.37it/s]  0%|          | 142/30000 [00:01<05:39, 88.04it/s]  1%|          | 152/30000 [00:02<05:33, 89.56it/s]  1%|          | 162/30000 [00:02<05:55, 83.82it/s]  1%|          | 172/30000 [00:02<05:42, 87.11it/s]  1%|          | 181/30000 [00:02<06:21, 78.22it/s]  1%|          | 190/30000 [00:02<06:56, 71.62it/s]  1%|          | 198/30000 [00:02<06:48, 73.00it/s]  1%|          | 207/30000 [00:02<06:25, 77.19it/s]  1%|          | 215/30000 [00:02<06:42, 74.03it/s]  1%|          | 223/30000 [00:03<06:49, 72.72it/s]  1%|          | 236/30000 [00:03<05:42, 86.86it/s]  1%|          | 246/30000 [00:03<05:38, 87.85it/s]  1%|          | 257/30000 [00:03<05:19, 93.18it/s]  1%|          | 269/30000 [00:03<05:26, 91.19it/s]  1%|          | 279/30000 [00:03<05:26, 91.05it/s]  1%|          | 289/30000 [00:03<05:37, 88.16it/s]  1%|          | 298/30000 [00:03<05:58, 82.96it/s]  1%|          | 308/30000 [00:03<05:40, 87.29it/s]  1%|          | 317/30000 [00:04<05:43, 86.45it/s]  1%|          | 328/30000 [00:04<05:19, 92.90it/s]  1%|          | 338/30000 [00:04<05:41, 86.82it/s]  1%|          | 348/30000 [00:04<05:39, 87.35it/s]  1%|          | 357/30000 [00:04<05:39, 87.32it/s]  1%|          | 366/30000 [00:04<05:58, 82.55it/s]  1%|▏         | 375/30000 [00:04<06:34, 75.16it/s]  1%|▏         | 384/30000 [00:04<06:17, 78.39it/s]  1%|▏         | 393/30000 [00:04<06:19, 78.05it/s]  1%|▏         | 401/30000 [00:05<06:33, 75.14it/s]  1%|▏         | 409/30000 [00:05<06:29, 75.97it/s]  1%|▏         | 419/30000 [00:05<06:23, 77.21it/s]  1%|▏         | 430/30000 [00:05<06:07, 80.50it/s]  1%|▏         | 439/30000 [00:05<06:04, 81.07it/s]  1%|▏         | 448/30000 [00:05<05:55, 83.16it/s]  2%|▏         | 457/30000 [00:05<06:07, 80.33it/s]  2%|▏         | 469/30000 [00:05<05:31, 89.11it/s]  2%|▏         | 478/30000 [00:05<05:35, 87.95it/s]  2%|▏         | 487/30000 [00:06<05:56, 82.70it/s]  2%|▏         | 496/30000 [00:06<06:15, 78.65it/s]  2%|▏         | 505/30000 [00:06<06:10, 79.58it/s]  2%|▏         | 515/30000 [00:06<05:52, 83.68it/s]  2%|▏         | 524/30000 [00:06<05:49, 84.45it/s]  2%|▏         | 533/30000 [00:06<06:09, 79.77it/s]  2%|▏         | 542/30000 [00:06<06:30, 75.45it/s]  2%|▏         | 552/30000 [00:06<06:01, 81.36it/s]  2%|▏         | 561/30000 [00:07<05:55, 82.73it/s]  2%|▏         | 570/30000 [00:07<06:10, 79.48it/s]  2%|▏         | 583/30000 [00:07<05:21, 91.37it/s]  2%|▏         | 593/30000 [00:07<05:15, 93.33it/s]  2%|▏         | 605/30000 [00:07<04:59, 98.07it/s]  2%|▏         | 615/30000 [00:07<05:34, 87.79it/s]  2%|▏         | 625/30000 [00:07<05:31, 88.57it/s]  2%|▏         | 635/30000 [00:07<05:29, 89.10it/s]  2%|▏         | 645/30000 [00:07<05:26, 89.88it/s]  2%|▏         | 655/30000 [00:08<05:59, 81.55it/s]  2%|▏         | 666/30000 [00:08<05:35, 87.39it/s]  2%|▏         | 675/30000 [00:08<05:56, 82.19it/s]  2%|▏         | 684/30000 [00:08<06:11, 78.81it/s]  2%|▏         | 695/30000 [00:08<05:40, 85.96it/s]  2%|▏         | 704/30000 [00:08<06:02, 80.91it/s]  2%|▏         | 715/30000 [00:08<05:37, 86.71it/s]  2%|▏         | 725/30000 [00:08<05:24, 90.10it/s]  2%|▏         | 735/30000 [00:09<06:03, 80.48it/s]  2%|▏         | 744/30000 [00:09<05:56, 81.99it/s]  3%|▎         | 753/30000 [00:09<06:26, 75.70it/s]  3%|▎         | 762/30000 [00:09<06:25, 75.78it/s]  3%|▎         | 771/30000 [00:09<06:12, 78.46it/s]  3%|▎         | 782/30000 [00:09<05:46, 84.43it/s]  3%|▎         | 791/30000 [00:09<05:46, 84.29it/s]  3%|▎         | 802/30000 [00:09<05:34, 87.17it/s]  3%|▎         | 811/30000 [00:09<05:34, 87.15it/s]  3%|▎         | 820/30000 [00:10<05:51, 82.99it/s]  3%|▎         | 830/30000 [00:10<05:53, 82.53it/s]  3%|▎         | 839/30000 [00:10<05:53, 82.54it/s]  3%|▎         | 848/30000 [00:10<05:58, 81.41it/s]  3%|▎         | 857/30000 [00:10<06:08, 79.14it/s]  3%|▎         | 869/30000 [00:10<05:37, 86.29it/s]  3%|▎         | 879/30000 [00:10<05:29, 88.45it/s]  3%|▎         | 888/30000 [00:10<05:41, 85.27it/s]  3%|▎         | 897/30000 [00:11<05:51, 82.75it/s]  3%|▎         | 906/30000 [00:11<05:47, 83.69it/s]  3%|▎         | 915/30000 [00:11<06:30, 74.57it/s]  3%|▎         | 925/30000 [00:11<06:05, 79.54it/s]  3%|▎         | 934/30000 [00:11<06:11, 78.22it/s]  3%|▎         | 945/30000 [00:11<05:36, 86.37it/s]  3%|▎         | 954/30000 [00:11<05:34, 86.95it/s]  3%|▎         | 964/30000 [00:11<05:45, 84.04it/s]  3%|▎         | 973/30000 [00:11<05:55, 81.69it/s]  3%|▎         | 982/30000 [00:12<06:19, 76.55it/s]  3%|▎         | 991/30000 [00:12<06:07, 78.85it/s]  3%|▎         | 1000/30000 [00:12<06:06, 79.15it/s]  3%|▎         | 1010/30000 [00:12<05:46, 83.63it/s]  3%|▎         | 1019/30000 [00:12<05:42, 84.52it/s]  3%|▎         | 1028/30000 [00:12<05:46, 83.70it/s]  3%|▎         | 1037/30000 [00:12<05:47, 83.36it/s]  3%|▎         | 1049/30000 [00:12<05:15, 91.84it/s]  4%|▎         | 1059/30000 [00:12<05:35, 86.34it/s]  4%|▎         | 1068/30000 [00:13<05:50, 82.54it/s]  4%|▎         | 1077/30000 [00:13<05:50, 82.64it/s]  4%|▎         | 1089/30000 [00:13<05:11, 92.67it/s]  4%|▎         | 1099/30000 [00:13<05:19, 90.32it/s]  4%|▎         | 1109/30000 [00:13<05:34, 86.27it/s]  4%|▎         | 1118/30000 [00:13<05:31, 87.14it/s]  4%|▍         | 1127/30000 [00:13<06:02, 79.75it/s]  4%|▍         | 1137/30000 [00:13<05:41, 84.40it/s]  4%|▍         | 1146/30000 [00:14<06:06, 78.67it/s]  4%|▍         | 1155/30000 [00:14<06:09, 78.06it/s]  4%|▍         | 1165/30000 [00:14<05:57, 80.74it/s]  4%|▍         | 1174/30000 [00:14<05:58, 80.41it/s]  4%|▍         | 1183/30000 [00:14<06:15, 76.68it/s]  4%|▍         | 1192/30000 [00:14<06:01, 79.59it/s]  4%|▍         | 1201/30000 [00:14<05:59, 80.21it/s]  4%|▍         | 1210/30000 [00:14<06:14, 76.86it/s]  4%|▍         | 1222/30000 [00:14<05:26, 88.01it/s]  4%|▍         | 1232/30000 [00:15<05:16, 90.82it/s]  4%|▍         | 1242/30000 [00:15<05:42, 84.08it/s]  4%|▍         | 1251/30000 [00:15<05:56, 80.74it/s]  4%|▍         | 1261/30000 [00:15<05:36, 85.30it/s]  4%|▍         | 1270/30000 [00:15<05:47, 82.65it/s]  4%|▍         | 1279/30000 [00:15<06:00, 79.78it/s]  4%|▍         | 1289/30000 [00:15<05:42, 83.76it/s]  4%|▍         | 1299/30000 [00:15<05:27, 87.73it/s]  4%|▍         | 1311/30000 [00:15<05:14, 91.12it/s]  4%|▍         | 1321/30000 [00:16<05:21, 89.20it/s]  4%|▍         | 1330/30000 [00:16<05:38, 84.70it/s]/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py:245: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:254.)
+  states_t = torch.tensor(states, dtype=torch.float32, device=self.device)
+  4%|▍         | 1330/30000 [00:16<05:54, 80.87it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 149, in train
+    ls = self.update_policy(batch_log_probs, targets, eligibility_traces, entropies)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 215, in update_policy
+    if config['method'] == 'TD_lambda':
+NameError: name 'config' is not defined
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 149, in train
+    ls = self.update_policy(batch_log_probs, targets, eligibility_traces, entropies)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 215, in update_policy
+    if config['method'] == 'TD_lambda':
+NameError: name 'config' is not defined

@@ -1,0 +1,8 @@
+{"time":"2025-02-26T10:56:41.07341516+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250226_105639-dvstyulr/logs/debug-core.log"}
+{"time":"2025-02-26T10:56:41.182839602+09:00","level":"INFO","msg":"created new stream","id":"dvstyulr"}
+{"time":"2025-02-26T10:56:41.182883688+09:00","level":"INFO","msg":"stream: started","id":"dvstyulr"}
+{"time":"2025-02-26T10:56:41.182909579+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"dvstyulr"}
+{"time":"2025-02-26T10:56:41.182968734+09:00","level":"INFO","msg":"handler: started","stream_id":"dvstyulr"}
+{"time":"2025-02-26T10:56:41.182924256+09:00","level":"INFO","msg":"sender: started","stream_id":"dvstyulr"}
+{"time":"2025-02-26T10:56:41.74165371+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-26T15:31:52.084132371+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/dvstyulr/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}

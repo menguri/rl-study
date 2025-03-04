@@ -1,0 +1,15 @@
+{"time":"2025-02-27T14:30:59.02755373+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250227_143058-k51urcnc/logs/debug-core.log"}
+{"time":"2025-02-27T14:30:59.189579271+09:00","level":"INFO","msg":"created new stream","id":"k51urcnc"}
+{"time":"2025-02-27T14:30:59.189619838+09:00","level":"INFO","msg":"stream: started","id":"k51urcnc"}
+{"time":"2025-02-27T14:30:59.189631395+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"k51urcnc"}
+{"time":"2025-02-27T14:30:59.189638463+09:00","level":"INFO","msg":"sender: started","stream_id":"k51urcnc"}
+{"time":"2025-02-27T14:30:59.189645943+09:00","level":"INFO","msg":"handler: started","stream_id":"k51urcnc"}
+{"time":"2025-02-27T14:30:59.532571072+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-27T14:31:01.824491134+09:00","level":"INFO","msg":"stream: closing","id":"k51urcnc"}
+{"time":"2025-02-27T14:31:01.8245377+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-27T14:31:01.824984197+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-27T14:31:02.770359009+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-27T14:31:03.08822961+09:00","level":"INFO","msg":"handler: closed","stream_id":"k51urcnc"}
+{"time":"2025-02-27T14:31:03.088248957+09:00","level":"INFO","msg":"sender: closed","stream_id":"k51urcnc"}
+{"time":"2025-02-27T14:31:03.088247557+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"k51urcnc"}
+{"time":"2025-02-27T14:31:03.088333391+09:00","level":"INFO","msg":"stream: closed","id":"k51urcnc"}

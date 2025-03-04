@@ -1,6 +1,7 @@
 import os
 import tqdm
 import wandb
+import random
 import numpy as np
 from collections import deque
 import torch
@@ -18,52 +19,57 @@ A2C.py:
 - V, Q, TD, TD(lambda), Natural 등 다양한 방식의 파라미터 업데이트 구현   
 '''
 
+# 시드 고정
+seed = 42
+random.seed(seed)
+np.random.seed(seed)
+torch.manual_seed(seed)
+torch.cuda.manual_seed_all(seed)
+
 class A2C:
     def __init__(self, env, config, device):
         self.env = env
         self.config = config
         self.device = device
-        self.action_dim = env.action_space.shape[0]
+
+        # Dimensions
         self.state_dim = env.observation_space.shape[0]
-        self.method = config['method']
+        self.action_dim = env.action_space.shape[0]
 
-        # actor & critic
-        self.policy = ContinuousPolicyNetwork(self.state_dim, self.action_dim).to(self.device) 
-        self.vnet = Critic()
+        # Actor & Critic
+        self.policy = ContinuousPolicyNetwork(self.state_dim, self.action_dim).to(self.device)
+        self.critic = Critic(self.state_dim).to(self.device)
 
-        self.optimizer = optim.Adam(self.policy.parameters(), lr=config['lr'])
-        self.critic_optimizer = optim.Adam(self.vnet.parameters(), lr=config['lr'])
-        self.gamma = config['gamma']  # 할인율 (discount factor)
-        self.lambda_ = config['lambda']
+        # Optimizers
+        self.policy_optimizer = optim.Adam(self.policy.parameters(), lr=config['lr'])
+        self.critic_optimizer = optim.Adam(self.critic.parameters(), lr=config['lr'])
+
+        # Hyperparameters
+        self.gamma = config['gamma']
+        self.entropy_coeff = config.get('entropy_coeff', 0.01)
         self.total_episodes = config['total_episodes']
-        self.replay_buffer = deque(maxlen=config["buffer_size"])
 
-        # best param
-        self.best_score = 0.0
-        self.best_param = dict()
+        # Best model tracking
+        self.best_score = -1e9
+        self.best_episode = 0
+        self.best_param = None
 
-        # model name
-        self.base_dir = f"mujuco_lab/results/{config['model']}"
-        self.model_name = f"{config['model']}_{config['method']}_{config['lr']}_{config['gamma']}"
+        # 경로 설정
+        self.base_dir = f"results/{config['env_name']}/{config['model']}"
+        self.model_name = f"{config['model']}_{config['env_name']}_{config['lr']}_{config['gamma']}"
 
     def get_action(self, state):
-        # 상태로부터 행동 샘플링
-        state = torch.tensor(state, dtype=torch.float32).to(self.device)
-        mean, std = self.policy(state)
-        dist = torch.distributions.Normal(mean, std)
-        action = dist.sample()
-        log_prob = dist.log_prob(action)
-        return action.cpu().numpy(), log_prob
+        state_t = torch.tensor(state, dtype=torch.float32).to(self.device)
+        mean, std = self.policy(state_t)
 
-    def compute_fisher_information(self, states, actions, log_probs):
-        """
-        Fisher Information Matrix 계산 (FIM)
-        """
-        fisher_information = torch.zeros_like(self.policy.parameters())
-        for state, action, log_prob in zip(states, actions, log_probs):
-            grad_log_prob = torch.autograd.grad(log_prob, self.policy.parameters(), retain_graph=True)
-            fisher_information += torch.tensor([torch.outer(grad, grad) for grad in grad_log_prob])
-        return fisher_information
+        std = torch.clamp(std, min=1e-6)
+        dist = torch.distributions.Normal(mean, std)
+
+        action = dist.sample()
+        log_prob = dist.log_prob(action).sum(dim=-1)
+        entropy = dist.entropy().sum(dim=-1)
+
+        return action.cpu().numpy(), log_prob, entropy
 
     def train(self):
         rewards_history = []
@@ -71,178 +77,125 @@ class A2C:
         for episode in tqdm.tqdm(range(self.total_episodes)):
             obs, _ = self.env.reset()
             state = np.array(obs, dtype=np.float32)
-            episode_reward = 0.0
             done = False
-            log_probs = []  # 로그 확률 기록
-            rewards = []  # 보상 기록
-            states = []  # 상태태 기록
-            actions = []  # 행동 기록
-            next_states = []  # 다음 상태 기록
-            dones = []  # 종료여부 기록
+
+            # 에피소드 내 기록
+            states = []
+            actions = []
+            rewards = []
+            log_probs = []
+            entropies = []
+            next_states = []
+            dones = []
+
+            # ---------- 1) 에피소드 수집 ----------
+            episode_reward = 0.0
             while not done:
-                action, log_prob = self.get_action(state)  # 행동과 로그 확률
+                action, log_prob, entropy = self.get_action(state)
                 next_obs, reward, done, truncated, _ = self.env.step(action)
+
                 next_state = np.array(next_obs, dtype=np.float32)
-                self.replay_buffer.append((state, action, reward, next_state, done))
                 episode_reward += reward
-                log_probs.append(log_prob)  # 행동에 대한 로그 확률 저장
-                rewards.append(reward)  # 보상 저장
-                rewards.append(reward)
+
                 states.append(state)
                 actions.append(action)
+                rewards.append(reward)
+                log_probs.append(log_prob)
+                entropies.append(entropy)
                 next_states.append(next_state)
                 dones.append(done)
 
                 state = next_state
                 if done or truncated:
                     break
-            
-            # ----------------------------------------------------
-            # 1) Critic target (여기서는 state_values라고 명명)
-            #    method별로 다른 형태(Q, Advantage, TD, 등)를 계산
-            # ----------------------------------------------------
-            targets, eligibility_traces, fisher_inv = self.compute_targets(states, actions, rewards, next_states, dones, log_probs)
 
-            # ----------------------------------------------------
-            # 2) Policy update (Actor)
-            #    -log πθ(s,a) * [ Q, Advantage, TD-error, ... ]
-            # ----------------------------------------------------
-            loss = self.update_policy(log_probs, targets, eligibility_traces)
-            
-            # episode reward 저장 및 best일 경우, 해당 policy param 저장장
+            # ---------- 2) 리워드 정규화 (원한다면) ----------
+            rewards = np.array(rewards, dtype=np.float32)
+            if self.config.get("reward_normalize", False):
+                r_mean = rewards.mean()
+                r_std = rewards.std() if rewards.std() > 1e-6 else 1.0
+                rewards = (rewards - r_mean) / r_std
+
+            # ---------- 3) Advantage(또는 TD-Return) 계산 ----------
+            # 간단히 1-step 혹은 MonteCarlo로 예시
+            # (원하면 GAE, TD(lambda) 등 더 복잡한 방법 구현 가능)
+            with torch.no_grad():
+                values = []
+                for s in states:
+                    s_t = torch.tensor(s, dtype=torch.float32).to(self.device)
+                    values.append(self.critic(s_t).item())
+
+                # 한 에피소드라 done=1, MonteCarlo Return
+                # G_t = r_t + gamma*r_{t+1} + ... 
+                # 여기서는 간단히 backwards로 누적
+                returns = []
+                G = 0
+                for r, d in zip(reversed(rewards), reversed(dones)):
+                    G = r + self.gamma * G
+                    returns.insert(0, G)
+
+            # ---------- 4) Critic Update (단일 backward) ----------
+            states_t = torch.tensor(states, dtype=torch.float32, device=self.device)
+            returns_t = torch.tensor(returns, dtype=torch.float32, device=self.device)
+
+            # 가치함수 예측
+            pred_values = self.critic(states_t).squeeze(-1)
+            critic_loss = F.mse_loss(pred_values, returns_t)
+
+            self.critic_optimizer.zero_grad()
+            critic_loss.backward()
+            self.critic_optimizer.step()
+
+            # ---------- 5) Policy Update (단일 backward) ----------
+            # Advantage = G_t - V(s_t)
+            advantages = returns_t - pred_values.detach()
+
+            log_probs_t = torch.stack(log_probs).to(self.device)
+            entropies_t = torch.stack(entropies).to(self.device)
+            advantages_t = advantages
+
+            # policy loss = - log_prob * advantage - entropy_bonus
+            policy_loss = -(log_probs_t * advantages_t).sum()
+            policy_loss -= self.entropy_coeff * entropies_t.sum()
+
+            self.policy_optimizer.zero_grad()
+            policy_loss.backward()
+            self.policy_optimizer.step()
+
+            # ---------- 6) Logging & 모델 저장 ----------
             rewards_history.append(episode_reward)
-            if episode_reward > best_score:
-                best_param = self.policy.state_dict()
+            if episode_reward > self.best_score:
+                self.best_score = episode_reward
+                self.best_episode = episode
+                self.best_param = self.policy.state_dict()
 
-            wandb.log({"episode": episode, "reward": episode_reward})
-            wandb.log({"episode": episode, "loss": loss.item()})
-            print(f"Episode: {episode}, Reward: {episode_reward}")
-        
-        # Best 모델과 마지막 모델 각각 저장
-        self.save_model(self.best_param, self.model_name + "_best.pth")
-        self.save_model(self.policy.state_dict(), self.model_name + ".pth")
-        
+            if episode % 500 == 0:
+                self.save_model(self.policy.state_dict(), self.model_name, f"_ep{episode}_{episode_reward}.pth")
+
+            wandb.log({
+                "episode": episode,
+                "reward": episode_reward,
+                "Critic_loss": critic_loss.item(),
+                "Policy_loss": policy_loss.item(),
+            })
+
+        # 끝난 뒤 Best & 최종 모델 저장
+        self.save_model(self.best_param, self.model_name, f"_best_{self.best_score}.pth")
+        self.save_model(self.policy.state_dict(), self.model_name, "_last.pth")
+
         return rewards_history
 
-    def compute_targets(self, states, actions, rewards, next_states, dones, log_probs):
-        state_values = []
-        eligibility_traces = []
-        fisher_inv = []
-        e_t = torch.zeros_like(states[0], dtype=torch.float32).to(self.device)  # 초기화: 기울기
-
-        for state, action, next_state, reward, done, log_prob in zip(states, actions, next_states, rewards, dones, log_probs):
-            state = torch.tensor(state, dtype=torch.float32).to(self.device)
-            action = torch.tensor(action, dtype=torch.float32).to(self.device)
-            next_state = torch.tensor(next_state, dtype=torch.float32).to(self.device)
-            reward = torch.tensor(reward, dtype=torch.float32).to(self.device)
-            log_prob = torch.tensor(log_prob, dtype=torch.float32).to(self.device)
-
-            if self.method == 'Q':
-                # Q-learning: Compute Q(s, a) for the current state-action pair
-                next_v_value = self.vnet(next_state)
-                q_value = reward + next_v_value
-                state_values.append(q_value)
-
-            elif self.method == 'Advantage':
-                # Advantage: Compute Advantage (A = Q - V)
-                v_s = self.vnet(state)
-                v_s_next = self.vnet(next_state)
-                advantage = reward + (1 - done) * self.gamma * v_s_next - v_s
-                state_values.append(advantage)
-
-            elif self.method == 'TD_lambda':
-                # TD(lambda): Handle eligibility traces and updates here
-                v_s = self.vnet(state)
-                v_s_next = self.vnet(next_state)
-                td_error = reward + (1 - done) * self.gamma * v_s_next - v_s
-                state_values.append(td_error)
-                # eligibility traces updated
-                e = self.lambda_ * e +  log_prob
-                eligibility_traces.append(e)
-
-            elif self.method == 'Natural':
-                # Natural Policy Gradient: Adjust the gradient step size using Fisher Information Matrix
-                v_s = self.vnet(state)
-                v_s_next = self.vnet(next_state)
-                td_error = reward + (1 - done) * self.gamma * v_s_next - v_s
-                state_values.append(td_error)
-
-        if self.method == 'Natural':    
-            # Fisher Information Matrix 계산
-            fisher_information = self.compute_fisher_information(states, actions, log_probs)
-            fisher_inv = torch.inverse(fisher_information + 1e-8 * torch.eye(fisher_information.size(0)))
-
-        return state_values, eligibility_traces, fisher_inv
-
-    def update_policy(self, log_probs, pg_targets, eligibility_traces, fisher_inv=False):
-        """
-        policy gradient update
-         - 일반적인 형태:  Loss = - Σ [ logπ(s,a) * (Q / Advantage / TD-lambda / ...) ]
-        """
-        pg_targets_t = torch.tensor(pg_targets, dtype=torch.float32).to(self.device)
-        eligibility_traces = torch.tensor(eligibility_traces, dtype=torch.float32).to(self.device)
-        log_probs = torch.stack(log_probs) 
-
-        # 손실 함수
-        # L = - Σ [ logπ(s,a) * pg_targets ]
-        if self.method == "TD_lambda":
-            loss = -torch.sum(eligibility_traces * pg_targets_t)
-        elif self.method == 'Natural':
-            # 자연적 그라디언트 계산
-            loss = -torch.matmul(fisher_inv, log_probs * state_values)
-        else:
-            loss = -torch.sum(log_probs * pg_targets_t)
-
-        self.optimizer.zero_grad()
-        loss.backward()
-        self.optimizer.step()
-
-        # Critic도 업데이트 (Qnet)
-        self.update_critic(pg_targets_t)
-
-        return loss
-
-    def update_critic(self):
-        """
-        Critic(V(s)) 업데이트
-         - TD(0)라면 target = r + gamma * V(s') 로 MSE
-         - 여기서는 replay_buffer에서 mini-batch를 뽑아 업데이트 예시
-        """
-        if len(self.replay_buffer) < 32:
-            return
-
-        batch_size = 32
-        transitions = [self.replay_buffer[i] for i in range(batch_size)]
-        states, actions, rewards, next_states, dones = zip(*transitions)
-
-        states_t = torch.tensor(states, dtype=torch.float32, device=self.device)
-        rewards_t = torch.tensor(rewards, dtype=torch.float32, device=self.device)
-        next_states_t = torch.tensor(next_states, dtype=torch.float32, device=self.device)
-        dones_t = torch.tensor(dones, dtype=torch.float32, device=self.device)
-
-        v_s = self.vnet(states_t).squeeze(-1)        # (batch,)
-        v_s_next = self.vnet(next_states_t).squeeze(-1)  # (batch,)
-
-        target_v = rewards_t + (1 - dones_t) * self.gamma * v_s_next
-        critic_loss = F.mse_loss(v_s, target_v.detach())
-
-        self.critic_optimizer.zero_grad()
-        critic_loss.backward()
-        self.critic_optimizer.step()
-    
-    def save_model(self, param, file_name):
-        # `project/results` 디렉토리가 없으면 생성
-        if not os.path.exists(self.base_dir):
-            os.makedirs(self.base_dir)
-        # 모델의 state_dict를 저장합니다.
-        file_path = os.path.join(self.base_dir, file_name)
+    def save_model(self, param, file_name, suffix=".pth"):
+        pt_dir = os.path.join(self.base_dir, file_name)
+        if not os.path.exists(pt_dir):
+            os.makedirs(pt_dir)
+        file_path = os.path.join(pt_dir, file_name + suffix)
         torch.save(param, file_path)
 
     def load_model(self, file_name):
         file_path = os.path.join(self.base_dir, file_name)
-        # 모델을 로드하고 state_dict를 업데이트합니다.
         self.policy.load_state_dict(torch.load(file_path))
-        self.policy.eval()  # 평가 모드로 전환
+        self.policy.eval()
 
 
 

@@ -1,0 +1,21 @@
+  0%|                                                                                | 0/10000 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 112, in train
+    loss = self.update_policy(log_probs, targets, eligibility_traces)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 185, in update_policy
+    eligibility_traces = torch.tensor(eligibility_traces, dtype=torch.float32).to(self.device)
+ValueError: only one element tensors can be converted to Python scalars
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 112, in train
+    loss = self.update_policy(log_probs, targets, eligibility_traces)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 185, in update_policy
+    eligibility_traces = torch.tensor(eligibility_traces, dtype=torch.float32).to(self.device)
+ValueError: only one element tensors can be converted to Python scalars

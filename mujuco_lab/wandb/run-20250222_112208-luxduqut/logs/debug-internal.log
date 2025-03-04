@@ -1,0 +1,15 @@
+{"time":"2025-02-22T11:22:08.619632003+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250222_112208-luxduqut/logs/debug-core.log"}
+{"time":"2025-02-22T11:22:08.729530744+09:00","level":"INFO","msg":"created new stream","id":"luxduqut"}
+{"time":"2025-02-22T11:22:08.729579184+09:00","level":"INFO","msg":"stream: started","id":"luxduqut"}
+{"time":"2025-02-22T11:22:08.729599648+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"luxduqut"}
+{"time":"2025-02-22T11:22:08.729609904+09:00","level":"INFO","msg":"sender: started","stream_id":"luxduqut"}
+{"time":"2025-02-22T11:22:08.729619444+09:00","level":"INFO","msg":"handler: started","stream_id":"luxduqut"}
+{"time":"2025-02-22T11:22:09.178380151+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-23T02:30:21.964945711+09:00","level":"INFO","msg":"stream: closing","id":"luxduqut"}
+{"time":"2025-02-23T02:30:21.965006642+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-23T02:30:21.965464936+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-23T02:30:22.72374849+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-23T02:30:23.019831374+09:00","level":"INFO","msg":"handler: closed","stream_id":"luxduqut"}
+{"time":"2025-02-23T02:30:23.019874502+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"luxduqut"}
+{"time":"2025-02-23T02:30:23.019893261+09:00","level":"INFO","msg":"sender: closed","stream_id":"luxduqut"}
+{"time":"2025-02-23T02:30:23.020340005+09:00","level":"INFO","msg":"stream: closed","id":"luxduqut"}

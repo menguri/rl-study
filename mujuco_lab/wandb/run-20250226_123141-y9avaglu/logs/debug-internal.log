@@ -1,0 +1,20 @@
+{"time":"2025-02-26T12:31:42.088599438+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250226_123141-y9avaglu/logs/debug-core.log"}
+{"time":"2025-02-26T12:31:42.201489515+09:00","level":"INFO","msg":"created new stream","id":"y9avaglu"}
+{"time":"2025-02-26T12:31:42.20154385+09:00","level":"INFO","msg":"stream: started","id":"y9avaglu"}
+{"time":"2025-02-26T12:31:42.201558207+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"y9avaglu"}
+{"time":"2025-02-26T12:31:42.201960585+09:00","level":"INFO","msg":"handler: started","stream_id":"y9avaglu"}
+{"time":"2025-02-26T12:31:42.201971901+09:00","level":"INFO","msg":"sender: started","stream_id":"y9avaglu"}
+{"time":"2025-02-26T12:31:42.575672099+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-26T15:30:28.420733214+09:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-02-27T04:52:46.28622424+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/y9avaglu/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-02-27T10:24:04.936462998+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/y9avaglu/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-02-27T11:33:07.38876591+09:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-02-27T15:51:55.006071176+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/y9avaglu/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-02-27T17:00:45.965050632+09:00","level":"INFO","msg":"stream: closing","id":"y9avaglu"}
+{"time":"2025-02-27T17:00:45.965136446+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-27T17:00:45.965662108+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-27T17:00:46.787491605+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-27T17:00:47.099368274+09:00","level":"INFO","msg":"handler: closed","stream_id":"y9avaglu"}
+{"time":"2025-02-27T17:00:47.099412773+09:00","level":"INFO","msg":"sender: closed","stream_id":"y9avaglu"}
+{"time":"2025-02-27T17:00:47.099416457+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"y9avaglu"}
+{"time":"2025-02-27T17:00:47.099745195+09:00","level":"INFO","msg":"stream: closed","id":"y9avaglu"}

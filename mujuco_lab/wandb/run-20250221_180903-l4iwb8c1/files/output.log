@@ -1,0 +1,29 @@
+  0%|                                                                                     | 0/10000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 74, in train
+    action, log_prob, grad_log_prob = self.get_action(state)  # 행동과 로그 확률
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 55, in get_action
+    mean_grad = torch.autograd.grad(mean, self.policy.parameters(), retain_graph=True)
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/autograd/__init__.py", line 469, in grad
+    grad_outputs_ = _make_grads(
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/autograd/__init__.py", line 198, in _make_grads
+    raise RuntimeError(
+RuntimeError: grad can be implicitly created only for scalar outputs
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 74, in train
+    action, log_prob, grad_log_prob = self.get_action(state)  # 행동과 로그 확률
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/REINFORCE.py", line 55, in get_action
+    mean_grad = torch.autograd.grad(mean, self.policy.parameters(), retain_graph=True)
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/autograd/__init__.py", line 469, in grad
+    grad_outputs_ = _make_grads(
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/autograd/__init__.py", line 198, in _make_grads
+    raise RuntimeError(
+RuntimeError: grad can be implicitly created only for scalar outputs

@@ -1,0 +1,28 @@
+  0%|                                                              | 0/30000 [00:00<?, ?it/s]/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py:225: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:254.)
+  states_t = torch.tensor(states, dtype=torch.float32, device=self.device)
+tensor([ 0.0371,  0.0496,  0.0033, -0.0628,  0.0143,  0.1255,  0.1178,  0.1600,
+         0.0900,  0.1306,  0.0606,  0.0519,  0.0284,  0.0263,  0.0767,  0.0209,
+        -0.0759, -0.0822, -0.1030, -0.0170, -0.0124, -0.0442, -0.0360, -0.0544,
+        -0.0606], device='cuda:0', grad_fn=<SqueezeBackward1>)
+[np.float64(1.0170921422541765), np.float64(1.0170921422541765), np.float64(1.0170020008495506), np.float64(1.0170020008495506), np.float64(0.9862228856321295), np.float64(0.9862228856321295), np.float64(0.9192596642847037), np.float64(0.9192596642847037), np.float64(0.8994265909961131), np.float64(0.8994265909961131), np.float64(0.988362345223702), np.float64(0.988362345223702), np.float64(1.0171329496656631), np.float64(1.0171329496656631), np.float64(0.9368164753250052), np.float64(0.9368164753250052), np.float64(0.8357542491425679), np.float64(0.8357542491425679), np.float64(0.8539847109368275), np.float64(0.8539847109368275), np.float64(0.9204157856477675), np.float64(0.9204157856477675), np.float64(0.9584083641760137), np.float64(0.9584083641760137), np.float64(1.0543601655666444), np.float64(1.0543601655666444), np.float64(1.0860139574494927), np.float64(1.0860139574494927), np.float64(1.147686822417028), np.float64(1.147686822417028), np.float64(1.2105782418341728), np.float64(1.2105782418341728), np.float64(1.1803559612670451), np.float64(1.1803559612670451), np.float64(1.192444564854585), np.float64(1.192444564854585), np.float64(1.2405380722121413), np.float64(1.2405380722121413), np.float64(1.2572986430890265), np.float64(1.2572986430890265), np.float64(1.352404847596917), np.float64(1.352404847596917), np.float64(1.4721451837093693), np.float64(1.4721451837093693), np.float64(1.5263105942812296), np.float64(1.5263105942812296), np.float64(1.4662959681769683), np.float64(1.4662959681769683), np.float64(0.37756284889495195), np.float64(0.37756284889495195)]
+  0%|                                                              | 0/30000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 122, in train
+    self.update_critic(states, actions, rewards, next_states, dones)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 236, in update_critic
+    target_v = rewards_t + (1 - dones_t) * self.gamma * v_s_next
+RuntimeError: The size of tensor a (50) must match the size of tensor b (25) at non-singleton dimension 0
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 122, in train
+    self.update_critic(states, actions, rewards, next_states, dones)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 236, in update_critic
+    target_v = rewards_t + (1 - dones_t) * self.gamma * v_s_next
+RuntimeError: The size of tensor a (50) must match the size of tensor b (25) at non-singleton dimension 0

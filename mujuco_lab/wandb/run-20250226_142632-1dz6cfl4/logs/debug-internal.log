@@ -1,0 +1,15 @@
+{"time":"2025-02-26T14:26:34.338527437+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250226_142632-1dz6cfl4/logs/debug-core.log"}
+{"time":"2025-02-26T14:26:34.589677742+09:00","level":"INFO","msg":"created new stream","id":"1dz6cfl4"}
+{"time":"2025-02-26T14:26:34.589737886+09:00","level":"INFO","msg":"stream: started","id":"1dz6cfl4"}
+{"time":"2025-02-26T14:26:34.589758311+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"1dz6cfl4"}
+{"time":"2025-02-26T14:26:34.589774199+09:00","level":"INFO","msg":"sender: started","stream_id":"1dz6cfl4"}
+{"time":"2025-02-26T14:26:34.589787657+09:00","level":"INFO","msg":"handler: started","stream_id":"1dz6cfl4"}
+{"time":"2025-02-26T14:26:35.022214405+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-26T14:34:53.873100398+09:00","level":"INFO","msg":"stream: closing","id":"1dz6cfl4"}
+{"time":"2025-02-26T14:34:53.873156123+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-26T14:34:53.87371327+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-26T14:34:54.543552285+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-26T14:34:54.990884094+09:00","level":"INFO","msg":"handler: closed","stream_id":"1dz6cfl4"}
+{"time":"2025-02-26T14:34:54.990913989+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"1dz6cfl4"}
+{"time":"2025-02-26T14:34:54.990952956+09:00","level":"INFO","msg":"sender: closed","stream_id":"1dz6cfl4"}
+{"time":"2025-02-26T14:34:54.991057806+09:00","level":"INFO","msg":"stream: closed","id":"1dz6cfl4"}

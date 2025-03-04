@@ -1,0 +1,9 @@
+{"time":"2025-02-21T16:41:32.677139936+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250221_164132-th2dkzcl/logs/debug-core.log"}
+{"time":"2025-02-21T16:41:32.784409512+09:00","level":"INFO","msg":"created new stream","id":"th2dkzcl"}
+{"time":"2025-02-21T16:41:32.784441778+09:00","level":"INFO","msg":"stream: started","id":"th2dkzcl"}
+{"time":"2025-02-21T16:41:32.784453756+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"th2dkzcl"}
+{"time":"2025-02-21T16:41:32.784459771+09:00","level":"INFO","msg":"handler: started","stream_id":"th2dkzcl"}
+{"time":"2025-02-21T16:41:32.784464986+09:00","level":"INFO","msg":"sender: started","stream_id":"th2dkzcl"}
+{"time":"2025-02-21T16:41:33.165561358+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T16:56:49.033999358+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/mujuco_experiment/th2dkzcl/file_stream"}
+{"time":"2025-02-21T16:56:49.034071661+09:00","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/tatalintelli-university-of-seoul/mujuco_experiment/th2dkzcl/file_stream: {\"error\":\"run mujuco_experiment/th2dkzcl not found while streaming file\"}"}

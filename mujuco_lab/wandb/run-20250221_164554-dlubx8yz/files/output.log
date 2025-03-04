@@ -1,0 +1,21 @@
+  0%|                                                                                | 0/10000 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 106, in train
+    targets, eligibility_traces, fisher_inv = self.compute_targets(states, actions, rewards, next_states, dones, log_probs)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 133, in compute_targets
+    e = torch.zeros_like(log_probs)
+TypeError: zeros_like(): argument 'input' (position 1) must be Tensor, not list
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 106, in train
+    targets, eligibility_traces, fisher_inv = self.compute_targets(states, actions, rewards, next_states, dones, log_probs)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 133, in compute_targets
+    e = torch.zeros_like(log_probs)
+TypeError: zeros_like(): argument 'input' (position 1) must be Tensor, not list

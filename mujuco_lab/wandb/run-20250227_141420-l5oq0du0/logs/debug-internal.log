@@ -1,0 +1,9 @@
+{"time":"2025-02-27T14:14:20.560995501+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250227_141420-l5oq0du0/logs/debug-core.log"}
+{"time":"2025-02-27T14:14:20.668826648+09:00","level":"INFO","msg":"created new stream","id":"l5oq0du0"}
+{"time":"2025-02-27T14:14:20.668877314+09:00","level":"INFO","msg":"stream: started","id":"l5oq0du0"}
+{"time":"2025-02-27T14:14:20.668888946+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"l5oq0du0"}
+{"time":"2025-02-27T14:14:20.668901883+09:00","level":"INFO","msg":"sender: started","stream_id":"l5oq0du0"}
+{"time":"2025-02-27T14:14:20.668912725+09:00","level":"INFO","msg":"handler: started","stream_id":"l5oq0du0"}
+{"time":"2025-02-27T14:14:21.045720412+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-27T14:23:21.915183276+09:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/InvertedPendulum-v5_experiment/l5oq0du0/file_stream"}
+{"time":"2025-02-27T14:23:21.915257697+09:00","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/tatalintelli-university-of-seoul/InvertedPendulum-v5_experiment/l5oq0du0/file_stream: {\"error\":\"run InvertedPendulum-v5_experiment/l5oq0du0 not found while streaming file\"}"}

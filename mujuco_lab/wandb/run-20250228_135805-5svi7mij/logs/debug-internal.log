@@ -1,0 +1,16 @@
+{"time":"2025-02-28T13:58:06.418374595+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/wandb/run-20250228_135805-5svi7mij/logs/debug-core.log"}
+{"time":"2025-02-28T13:58:06.536612487+09:00","level":"INFO","msg":"created new stream","id":"5svi7mij"}
+{"time":"2025-02-28T13:58:06.536663028+09:00","level":"INFO","msg":"stream: started","id":"5svi7mij"}
+{"time":"2025-02-28T13:58:06.53668461+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"5svi7mij"}
+{"time":"2025-02-28T13:58:06.536690755+09:00","level":"INFO","msg":"handler: started","stream_id":"5svi7mij"}
+{"time":"2025-02-28T13:58:06.536698124+09:00","level":"INFO","msg":"sender: started","stream_id":"5svi7mij"}
+{"time":"2025-02-28T13:58:06.926856133+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-01T02:03:22.800133414+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/tatalintelli-university-of-seoul/HalfCheetah-v5_experiment/5svi7mij/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-03-01T09:32:12.589863289+09:00","level":"INFO","msg":"stream: closing","id":"5svi7mij"}
+{"time":"2025-03-01T09:32:12.589922823+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-01T09:32:12.590442255+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-01T09:32:13.311070619+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-01T09:32:13.595323725+09:00","level":"INFO","msg":"handler: closed","stream_id":"5svi7mij"}
+{"time":"2025-03-01T09:32:13.595363803+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"5svi7mij"}
+{"time":"2025-03-01T09:32:13.595385507+09:00","level":"INFO","msg":"sender: closed","stream_id":"5svi7mij"}
+{"time":"2025-03-01T09:32:13.596142826+09:00","level":"INFO","msg":"stream: closed","id":"5svi7mij"}

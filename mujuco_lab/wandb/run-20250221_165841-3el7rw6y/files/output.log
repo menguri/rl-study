@@ -1,0 +1,43 @@
+  0%|                                                                                | 0/10000 [00:00<?, ?it/s]/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py:185: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:254.)
+  eligibility_traces = torch.tensor(eligibility_traces, dtype=torch.float32).to(self.device)
+tensor([[-2.4090, -1.0673, -1.0859, -0.9608, -1.0934, -0.9304],
+        [-1.1359, -0.1630, -1.9799, -2.0141, -1.5046, -1.1388],
+        [-1.0867, -1.0138, -0.1397, -1.4529, -1.1620, -1.1249],
+        ...,
+        [-2.0576, -0.8745, -0.8577, -1.5402, -3.1178, -2.1112],
+        [-4.7853, -0.5408, -0.6728, -1.1020, -2.7779, -0.9334],
+        [-0.9298,  0.3816, -1.8752, -1.7665, -0.3011, -1.8850]],
+       device='cuda:0')
+  0%|                                                                                | 0/10000 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 112, in train
+    loss = self.update_policy(log_probs, targets, eligibility_traces)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 200, in update_policy
+    loss.backward()
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+    torch.autograd.backward(
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 112, in train
+    loss = self.update_policy(log_probs, targets, eligibility_traces)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 200, in update_policy
+    loss.backward()
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+    torch.autograd.backward(
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/home1/alsrn50/miniconda3/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn

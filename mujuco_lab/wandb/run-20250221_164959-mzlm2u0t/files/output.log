@@ -1,0 +1,21 @@
+  0%|                                                                                | 0/10000 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 106, in train
+    targets, eligibility_traces, fisher_inv = self.compute_targets(states, actions, rewards, next_states, dones, log_probs)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 162, in compute_targets
+    e = self.lambda_ * e +  log_prob
+TypeError: can only concatenate list (not "Tensor") to list
+Traceback (most recent call last):
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 53, in <module>
+    main()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/train.py", line 47, in main
+    agent.train()
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 106, in train
+    targets, eligibility_traces, fisher_inv = self.compute_targets(states, actions, rewards, next_states, dones, log_probs)
+  File "/gpfs/home1/alsrn50/MLIC_LAB/rl-study/mujuco_lab/nn/A2C.py", line 162, in compute_targets
+    e = self.lambda_ * e +  log_prob
+TypeError: can only concatenate list (not "Tensor") to list
