@@ -16,7 +16,7 @@ pyzmq==26.2.0
 starlette==0.45.3
 archspec==0.2.3
 anaconda-anon-usage==0.5.0
-torch==2.1.0+cu121
+torch==2.2.0
 nvidia-cufft-cu11==10.9.0.58
 attrs==25.1.0
 executing==2.2.0
